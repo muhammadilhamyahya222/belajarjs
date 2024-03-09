@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tugas 1 JavaScript</title>
+</head>
+<body>
+    <script>
+        let pegawai = "Ridwan";
+        let jabatan = "Manager";
+        let status = "Menikah";
+    
+        if (jabatan == "Manager") {
+            gajiPokok = 15000000;
+        }
+        else if (jabatan == "Asisten Manager") {
+            gajiPokok = 10000000;
+        }
+        else if (jabatan == "Staff") {
+            gajiPokok = 5000000;
+        }
+        else {
+            gajiPokok = 0;
+        }
+    
+        let tunjanganJabatan = 0.15 * gajiPokok;
+        let bpjs = 0.1 * gajiPokok;
+        let tunjanganKeluarga = (status == "Menikah") ? 0.2 * gajiPokok : 0;
+        
+    </script>
+
+    <style>
+        thead {
+            background-color: blue;
+            color: #fff;
+        }
+        td {
+            padding: 0 40px 0 4px;
+        }
+    </style>
+
+    <table border="1">
+        <thead>
+            <tr>
+                <th colspan="2">Data Pegawai</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Nama Pegawai</td>
+                <td>
+                    <script>
+                        document.write(pegawai)
+                    </script>
+                </td>
+            </tr>
+            <tr>
+                <td>Jabatan</td>
+                <td>
+                    <script>
+                        document.write(jabatan)
+                    </script>
+                </td>
+            </tr>
+            <tr>
+                <td>Status</td>
+                <td>
+                    <script>
+                        document.write(status)
+                    </script>
+                </td>
+            </tr>
+            <tr>
+                <td>Gaji Pokok</td>
+                <td>
+                    <script>
+                        document.write(gajiPokok)
+                    </script>
+                </td>
+            </tr>
+            <tr>
+                <td>Tunjangan Jabatan</td>
+                <td>
+                    <script>
+                        document.write(tunjanganJabatan)
+                    </script>
+                </td>
+            </tr>
+            <tr>
+                <td>BPJS</td>
+                <td>
+                    <script>
+                        document.write(bpjs)
+                    </script>
+                </td>
+            </tr>
+            <tr>
+                <td>Tunjangan Keluarga</td>
+                <td>
+                    <script>
+                        document.write(tunjanganKeluarga)
+                    </script>
+                </td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <th>Total Gaji</th>
+                <td>
+                    <script>
+                        document.write(gajiPokok + tunjanganJabatan + bpjs + tunjanganKeluarga)
+                    </script>
+                </td>
+            </tr>
+        </tfoot>
+    </table>
+</body>
+</html>

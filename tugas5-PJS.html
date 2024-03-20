@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tugas 5 JavaScript</title>
+
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/jquery-3.7.1.min.js"></script>
+</head>
+<body>
+    <h2>Letakkan Kursor Ke Dalam Kotak Untuk Melihat Gambar dan Suara</h2>
+    <div id="mecca">
+        Mecca
+        <audio id="suara1" preload="auto" loop>
+            <source src="audio/mecca.mp3" type="audio/mpeg"/>
+        </audio>
+    </div>
+    <div id="kucing">
+        Maine Coon
+        <audio id="suara2" preload="auto" loop>
+            <source src="audio/cat.mp3" type="audio/mpeg"/>
+        </audio>
+    </div>
+    <div id="mobil">
+        Mazda 3 Hatchback
+        <audio id="suara3" preload="auto" loop>
+            <source src="audio/car.mp3" type="audio/mpeg"/>
+        </audio>
+    </div>
+
+    <script>
+        $("document").ready(function(){
+            $("#mecca").mouseover(function(){
+                $(this).css({
+                    background: "url('https://www.greenprophet.com/wp-content/uploads/2011/01/mecca-architecture1.jpg')"
+                });
+                $("#suara1")[0].play();
+            });
+            $("div").mouseout(function(){
+                $(this).css({
+                    background: "none"
+                });
+                $("#suara1")[0].pause();
+            })
+
+            $("#kucing").mouseover(function(){
+                $(this).css({
+                    background: "url('https://cdn.idntimes.com/content-images/community/2019/01/maine-coon-cat-photography-robert-sijka-17-57ad8ed924355-880-ce2ed61f54a726dda73489e4653b7bed.jpg')"
+                });
+                $("#suara2")[0].play();
+            });
+            $("div").mouseout(function(){
+                $(this).css({
+                    background: "none"
+                });
+                $("#suara2")[0].pause();
+            })
+
+            $("#mobil").mouseover(function(){
+                $(this).css({
+                    background: "url('https://imgcdnblog.carmudi.com.ph/wp-content/uploads/2020/11/11162145/Mazda3-100th-edition-6.jpg')"
+                });
+                $("#suara3")[0].play();
+            });
+            $("div").mouseout(function(){
+                $(this).css({
+                    background: "none"
+                });
+                $("#suara3")[0].pause();
+            })
+        });
+    </script>
+    
+</body>
+</html>
